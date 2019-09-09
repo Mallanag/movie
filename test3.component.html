@@ -1,0 +1,13 @@
+
+<form [formGroup]="movie">
+    <div class="form-group">
+    <p>Movie Name</p>
+    <input type="text" placeholder="Add the name" formControlName="name">
+    </div>
+    <p>Language</p>
+    <input type="text" placeholder="Add language" formControlName="lang">
+    <p>Genre</p>
+    <input type="text" placeholder="Add genre" formControlName="genre">
+</form>
+<button (click)="get(movie.value)">save</button>
+<button [routerLink]="['/mov']">Movie list</button>

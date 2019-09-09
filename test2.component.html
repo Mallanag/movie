@@ -1,0 +1,13 @@
+<form [formGroup]="logins">
+<div class="form-inline">
+    <label >Username:</label>
+    <input type="text"  formControlName="uname">
+  </div>
+<div class="form-inline">
+    <label >Password:</label>
+    <input type="password" formControlName="pwd">
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="login1(logins.value)" [routerLink]="['/test3']">Login</button>
+  </form>
+  <p>Don't have an Account?<br><a [routerLink]="['/test1']">Register here</a></p>

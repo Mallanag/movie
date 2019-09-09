@@ -1,0 +1,15 @@
+<input type="text" placeholder="search" [(ngModel)]="search">
+<a [routerLink]="['/test3']" >Add Movie</a>
+<table >
+    <tr>
+        <td>Movie Name</td>
+        <td>Language</td>
+        <td>Genre</td>
+    </tr>
+    <tr *ngFor='let d of list|filter:search; let i=index'>
+        <td>{{d.MovieName}}</td>
+        <td>{{d.Language}}</td>
+        <td>{{d.Genre}}</td>
+    </tr>
+</table>
+
